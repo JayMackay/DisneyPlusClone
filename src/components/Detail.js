@@ -26,6 +26,12 @@ function Detail() {
                     <img src="/images/group-icon.png" />
                 </GroupWatchButton>
             </Controls>
+            <SubTitle>
+                Placeholder subtitle text
+            </SubTitle>
+            <Description>
+                Placeholder description text
+            </Description>
         </Container>
     )
 }
@@ -93,7 +99,7 @@ const PlayButton = styled.button`
 const TrailerButton = styled(PlayButton)`
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgb(249, 249, 249);
-    colour: rgb(249, 249, 249);
+    color: rgb(249, 249, 249);
     text-transform: uppercase;
 `
 
@@ -117,4 +123,18 @@ const AddButton = styled.button`
 
 const GroupWatchButton = styled(AddButton)`
     background-color: rgb(0, 0, 0);
+`
+
+const SubTitle = styled.div`
+    color: rgb(249, 249, 249);
+    font-size: 15px;
+    min-height: 20px;
+    margin-top: 26px;
+`
+
+const Description = styled.div`
+    line-height: 1.4;
+    font-size: 20px;
+    margin-top: 16px;
+    color: rgb(249, 249, 249);
 `
