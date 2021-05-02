@@ -12,16 +12,22 @@ function ImgSlider() {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoPlay: true
-    }
+        autoplay: true,
+    };
 
     return (
         <Carousel {...settings}>
             <Wrap>
-                <img src="/images/slider-badging.jpg" />
+                <img src="/images/slider-badging.jpg" alt="" />
             </Wrap>
             <Wrap>
-                <img src="/images/slider-badag.jpg" />
+                <img src="/images/slider-scale.jpg" alt="" />
+            </Wrap>
+            <Wrap>
+                <img src="/images/slider-badag.jpg" alt="" />
+            </Wrap>
+            <Wrap>
+                <img src="/images/slider-scales.jpg" alt="" />
             </Wrap>
         </Carousel>
     )
@@ -31,11 +37,11 @@ export default ImgSlider
 
 const Carousel = styled(Slider)`
     margin-top: 20px;
-
+  
     ul li button {
         &:before {
             font-size: 10px;
-            color: rgb(250, 158, 171);
+            color: rgb(150, 158, 171);
         }
     }
 
@@ -53,7 +59,10 @@ const Carousel = styled(Slider)`
 `
 
 const Wrap = styled.div`
+    border-radius: 4px;
     cursor: pointer;
+    position: relative;
+
     img {
         border: 4px solid transparent;
         border-radius: 4px;
@@ -64,7 +73,9 @@ const Wrap = styled.div`
         transition-duration: 300ms;
 
         &:hover {
+            padding: 0;
             border: 4px solid rgba(249, 249, 249, 0.8);
+            transition-duration: 300ms;
         }
     }
 `
