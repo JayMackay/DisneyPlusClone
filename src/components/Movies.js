@@ -1,23 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
+import { selectMovies } from '../features/movie/movieSlice'
+import { constSelector, useSelector } from 'react-redux'
 
 function Movies() {
+    const movies = useSelector(selectMovies);
+
     return (
         <Container>
             <h4>Recommend for You</h4>
             <Content>
-                <Wrap>
-                    <img src="https://cms.qz.com/wp-content/uploads/2019/04/marvel-avengers-endgame-e1556039297104.jpg?quality=75&strip=all&w=1600&h=900" />
-                </Wrap>
-                <Wrap>
-                    <img src="https://cms.qz.com/wp-content/uploads/2019/04/marvel-avengers-endgame-e1556039297104.jpg?quality=75&strip=all&w=1600&h=900" />
-                </Wrap>
-                <Wrap>
-                    <img src="https://cms.qz.com/wp-content/uploads/2019/04/marvel-avengers-endgame-e1556039297104.jpg?quality=75&strip=all&w=1600&h=900" />
-                </Wrap>
-                <Wrap>
-                    <img src="https://cms.qz.com/wp-content/uploads/2019/04/marvel-avengers-endgame-e1556039297104.jpg?quality=75&strip=all&w=1600&h=900" />
-                </Wrap>
+                { movies && 
+                    movies.map((movie) => (
+                        <Wrap key = {movie.id}>
+                            <img src={movie.cardImg} />
+                        </Wrap>
+                    ))
+                }
             </Content>
         </Container>
     )
