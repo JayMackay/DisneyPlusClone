@@ -1,18 +1,19 @@
-import { useEffect } from "react";
-import styled from "styled-components";
-import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
-import { auth, provider } from "../firebase";
-import {
-    selectUserName,
-    selectUserPhoto,
-    setUserLogin,
+import { useEffect } from 'react';
+import { auth, provider } from '../firebase';
+import styled from 'styled-components';
+import { 
+    selectUserName, 
+    selectUserPhoto, 
+    setUserLogin, 
     setSignOut
-} from "../features/user/userSlice";
+} from '../features/user/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+
  
 function Header() {
     const dispatch = useDispatch()
-    const history = useHistory();
+    const history = useHistory()
     const userName = useSelector(selectUserName)
     const userPhoto = useSelector(selectUserPhoto)
 
@@ -55,7 +56,7 @@ function Header() {
             <Logo src="/images/logo.svg" />
             { !userName ? (
                 <LoginContainer>
-                    <Login onclick={signIn}>LOGIN</Login>
+                    <Login onClick={signIn}>LOGIN</Login>
                 </LoginContainer>
             ):
                 <>
@@ -86,7 +87,7 @@ function Header() {
                 </a>
             </NavMenu>
             <UserImg
-                onclick={signOut}
+                onClick={signOut}
                 src="/images/profile.png" />
                 </>
             }
@@ -136,6 +137,7 @@ const NavMenu = styled.div`
     position: relative;
     margin-right: auto;
     margin-left: 25px;
+    cursor: pointer;
 
     a {
         display: flex;
@@ -205,10 +207,10 @@ const Login = styled.div`
     letter-spacing: 1.5px;
     background-color: rgba(0, 0, 0, 0.6)
     transition: all 0.2s ease 0s;
-    cursor: pointer
+    cursor: pointer;
 
     &: hover {
-        bacground-color: #f9f9f9;
+        background-color: #f9f9f9;
         color: #000;
         border-color: transparent;
     }

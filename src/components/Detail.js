@@ -1,38 +1,61 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import { useParams } from 'react-router-dom'
+import db from '../firebase'
 
 function Detail() {
+    const { id } = useParams();
+    const [ movie, setMovie ] = useState()
+
+    useEffect(() => {
+        //Grab the movie information from database
+        db.collection("movies")
+        .doc(id)
+        .get()
+        .then((doc) => {
+            if(doc.exists) {
+                //Save the movie data
+                setMovie(doc.data());
+            } else {
+                //Redirect to the homepage
+            }
+        })
+    }, [])
+
     return (
         <Container>
-            <Background>
-                <img src="https://bit.ly/3ucWqFR" />
-            </Background>
-            <ImageTitle>
-                <img src="https://bit.ly/2PGYoiy" />
-            </ImageTitle>
-            <Controls>
-                <PlayButton>
-                    <img src="/images/play-icon-black.png" />
-                    <span>PLAY</span>
-                </PlayButton>
-                <TrailerButton>
-                    <img src="/images/play-icon-white.png" />
-                    <span>TRAILER</span>
-                </TrailerButton>
-                <AddButton>
-                    <span>+</span>
-                </AddButton>
-                <GroupWatchButton>
-                    <img src="/images/group-icon.png" />
-                </GroupWatchButton>
-            </Controls>
-            <SubTitle>
-                2018 • 7m • Family, Fantasy, Kids, Animation
-            </SubTitle>
-            <Description>
-                A Chinese mom who's sad when her grown son leaves home gets another chance at motherhood
-                when one of her dumplings springs to life. But she finds nothing stays cute and small forever.
-            </Description>
+            {movie && (
+            <>
+                <Background>
+                    <img src={movie.backgroundImg} />
+                </Background>
+                <ImageTitle>
+                    <img src={movie.titleImg} />
+                </ImageTitle>
+                <Controls>
+                    <PlayButton>
+                        <img src="/images/play-icon-black.png" />
+                        <span>PLAY</span>
+                    </PlayButton>
+                    <TrailerButton>
+                        <img src="/images/play-icon-white.png" />
+                        <span>TRAILER</span>
+                    </TrailerButton>
+                    <AddButton>
+                        <span>+</span>
+                    </AddButton>
+                    <GroupWatchButton>
+                        <img src="/images/group-icon.png" />
+                    </GroupWatchButton>
+                </Controls>
+                <SubTitle>
+                    {movie.subTitle}
+                </SubTitle>
+                <Description>
+                    {movie.description}
+                </Description>
+            </>     
+        )}
         </Container>
     )
 }
