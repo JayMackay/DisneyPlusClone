@@ -20,7 +20,7 @@ function Detail() {
 					//Redirect to the homepage
 				}
 			});
-	}, []);
+	}, [id]);
 
 	return (
 		<Container>

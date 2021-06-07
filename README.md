@@ -1,44 +1,73 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Disney Plus React Clone
 
-## Available Scripts
+![Disney Plus Application](https://www.corraditobias.com.ar/img/work/09/05.jpg)
 
-In the project directory, you can run:
+This is a Disney Plus Clone built with ReactJS and hosted utilizing Firebase. You can visit the website by clicking [here!](https://disneyplus-clone-a33d5.firebaseapp.com/)
 
-### `npm start`
+_Disclaimer: Please note that I do not own any rights to Disney or its partners. This platform was made soley for educational purposes and to be shown as a piece for a portfolio. There are no copyright infringements intended._
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To submit bug reports, feature suggestions, or track changes:
+https://github.com/JayMackay/DisneyPlusClone
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Contents Of This File
 
-### `npm test`
+-   Requirements
+-   Features
+-   Installation
+-   Troubleshooting
+-   Maintainers
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Requirements
 
-### `npm run build`
+This project is built using ReactJS Library Version 17.0.2 installed via Node Package Manager. The application requires the following extensions to run:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+Node.js:
+https://nodejs.org/en/download/
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+_As well as the following additional libraries:_
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   ReactJS: Base starting library execute the following command when creating you React application
 
-### `npm run eject`
+```
+npx create-react-app *AppName*
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-   Redux: Used to manage state & communication with the database
+-   Slick Slider: For the application movie slider component
+-   Styled Components: Implement CSS styling directly within your JavaScript components
+-   Firebase: Database management & hosting
+    https://medium.com/swlh/how-to-deploy-a-react-app-with-firebase-hosting-98063c5bf425
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm install --save redux
+npm install react-slick --save
+npm install --save styled-components
+npm install firebase-tools -g
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Features
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-   Login page with Google Authentication
+-   Display movies populated from a Firebase database
+-   Get specific movie data for each individual movie such as description
+-   Additional recommended list of movies withing the details tab
+-   Filter all movies depending on the producer or saga
 
-## Learn More
+### Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To install ensure you have the latest version of VS Code. Clone the project from the GitHub repository by downloading the zip file. Open the project within VS Code and open up the terminal. Ensure that you are in the main project directory before executing the following command and running the project on your local server.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npm start
+```
+
+### Troubleshooting
+
+**Firebase**
+To be amended
+
+## Authors
+
+Jared Mackay - https://github.com/JayMackay
