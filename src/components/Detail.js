@@ -144,6 +144,10 @@ const AddButton = styled.button`
 	border: 2px solid white;
 	cursor: pointer;
 
+	&:hover {
+		background: rgb(198, 198, 198);
+	}
+
 	span {
 		font-size: 30px;
 		color: white;
@@ -152,6 +156,10 @@ const AddButton = styled.button`
 
 const GroupWatchButton = styled(AddButton)`
 	background-color: rgb(0, 0, 0);
+
+	&:hover {
+		background: rgb(198, 198, 198);
+	}
 `;
 
 const SubTitle = styled.div`
