@@ -1,13 +1,11 @@
 # Disney Plus React Clone
 
-![Disney Plus Application](https://www.corraditobias.com.ar/img/work/09/05.jpg)
-
-This is a Disney Plus Clone built with ReactJS and hosted utilizing Firebase. You can visit the website by clicking [here!](https://disneyplus-clone-a33d5.firebaseapp.com/)
-
-_Disclaimer: Please note that I do not own any rights to Disney or its partners. This platform was made soley for educational purposes and to be shown as a piece for a portfolio. There are no copyright infringements intended._
+This is a Disney Plus Clone built with ReactJS and hosted utilizing Firebase. You can visit the website by clicking **_[HERE](https://disney-plus-clone-4fa0c.web.app/home)_**
 
 To submit bug reports, feature suggestions, or track changes:
 https://github.com/JayMackay/DisneyPlusClone
+
+_Disclaimer: Please note that I do not own any rights to Disney or its partners. This platform was made soley for educational purposes and to be shown as a piece for a portfolio. There are no copyright infringements intended._
 
 ### Contents Of This File
 
@@ -65,9 +63,19 @@ npm start
 
 ### Troubleshooting
 
-**Firebase**
-To be amended
+There were some issues trying to host on a seperate Firebase server as the application utilises a Firestore database from another source for external assets. Run the following commands in terminal if you are looking to redeploy and host:
+
+1. Execute `npm run build` to rebuild the project
+2. Login to Firebase using `firebase login` followed by `firebase init`
+3. Select the Hosting option as well as creating a new Firebase application or choosing from an existing project
+4. Type `build` for your folder of choice
+5. Choose **_Yes_** for Single Page Application option
+6. Select **_No_** to avoid overwriting of files for Firebase
+7. Run `firebase serve --only hosting` for testing
+8. Before finallly runnning `firebase deploy`
 
 ## Authors
 
 Jared Mackay - https://github.com/JayMackay
+
+![Disney Plus Application](https://www.corraditobias.com.ar/img/work/09/05.jpg)
