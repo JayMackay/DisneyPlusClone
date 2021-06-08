@@ -1,6 +1,6 @@
 # Disney Plus React Clone
 
-This is a Disney Plus Clone built with ReactJS and hosted utilizing Firebase. You can visit the website by clicking **_[HERE](https://disney-plus-clone-4fa0c.web.app/home)_**
+This is a Disney Plus Clone built with ReactJS and hosted utilizing Firebase. You can visit the website by clicking **_[HERE](https://disney-plus-clone-4fa0c.web.app)_**
 
 To submit bug reports, feature suggestions, or track changes:
 https://github.com/JayMackay/DisneyPlusClone
